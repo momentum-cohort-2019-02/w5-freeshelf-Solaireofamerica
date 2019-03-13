@@ -1,0 +1,15 @@
+{% extends "core/index.html" %}
+{% block content %}
+   <div class="">
+        <div class="ba b--silver mw6 pa3 ma2 avenir">
+            <div>
+            {% for author in book.author_of_book.all %}
+                <h1><a >{{ author.name }}</a></h1>
+            {% endfor %}
+            <small >{{ book.added_on }}</small>
+            </div>
+            <h2><a >{{ book.title }}</a></h2>
+            <p>{{ book.description }}</p>
+            <a class="link dim dark-blue pa1" href="{{ book.book_url }}">Link for the book as a PDF or a website.</a>
+        </div>
+{% endblock content %}

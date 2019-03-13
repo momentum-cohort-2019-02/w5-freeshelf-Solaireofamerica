@@ -1,25 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-
-    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'core/main.css' %}"> {% endcomment %}
-</head>
-<body class="ma0">
-    <header class="ba br1 bg-light-blue avenir"> 
-      <nav>
-        <div class="pa2 ma2"> 
-          <a class="pa1 ma1 link black bg-animate hover-bg-white" href="">Home</a>
-          <a class="pa1 ma1 link black bg-animate hover-bg-white" href="">About</a>
-          <a class="pa1 ma1 link black bg-animate hover-bg-white fr">Sign Up</a>
-          <a class="pa1 ma1 link black bg-animate hover-bg-white fr" href="">Login</a>
-        </div>
-      </nav>
-    </header>
-        {% block content %}{% endblock %}
-  </body>
-</html>
+{% extends "core/base.html" %}
+{% block content %}
+<p>This is the Home Page, it needs content!</p>
+{% endblock content %}

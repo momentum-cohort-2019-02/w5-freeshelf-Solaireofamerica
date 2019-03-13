@@ -5,9 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 prospector = "*"
+yapf = "*"
 
 [packages]
 django = "*"
+django-registration-redux = "*"
 
 [requires]
 python_version = "3.7"
