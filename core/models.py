@@ -37,4 +37,4 @@ class Book(models.Model):
         return reverse("book_detail", args=(self.pk, ))
 
 
-class Language(models.Model)
+# class Language(models.Model)
