@@ -30,6 +30,11 @@
               {% endif %} 
             </div>
         </div>
+        <div class="flex flex-wrap">
+          <p>Book Categories:</p>
+            {% for book in book.category.all %}
+              <a>{{ category.name }}</a>
+        </div>
       </nav>
     </header>
         {% block content %}{% endblock %}

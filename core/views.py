@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Book
+from .models import Book, Categories
 from django.views import generic
 
 # Create your views here.
@@ -25,6 +25,10 @@ def books(request):
 #         "core/book_detail.html",
 #         {"book": book},
 #     )
+
+
+class CategoryView(generic.DetailView):
+    model = Categories
 
 
 class BookDetailView(generic.DetailView):
