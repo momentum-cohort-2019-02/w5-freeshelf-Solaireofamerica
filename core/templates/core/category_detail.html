@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+   <div class="">
+        <div class="ba b--silver mw6 pa3 ma2 avenir">
+            <div>
+            {% for category in book.category.all %}
+                <h1><a >{{ category.name }}</a></h1>
+            {% endfor %}
+            </div>
+            <h2><a >{{ category.title }}</a></h2>
+        </div>
+{% endblock content %}

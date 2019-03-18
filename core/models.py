@@ -26,7 +26,7 @@ class Book(models.Model):
     slug = models.SlugField()
     categories = models.ManyToManyField(
         'Category',
-        help_text="Enter the Category/s for the book.",
+        help_text="Enter the Category of the book.",
         related_name="category",
     )
 
@@ -48,4 +48,4 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("category", args={self.slug})
+        return reverse("book_category", args=(self.slug, ))

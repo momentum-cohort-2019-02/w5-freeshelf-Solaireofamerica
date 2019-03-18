@@ -5,5 +5,5 @@ urlpatterns = [
     path('', views.home, name='core-home'),
     path('books/', views.books, name='core-books'),
     path('book/<int:pk>', views.BookDetailView.as_view(), name='book_detail'),
-    path('book/<slug:slug>', views.CategoryView.as_view(), name='category'),
+    path('category/<slug:slug>', views.categories, name='book_category'),
 ]
