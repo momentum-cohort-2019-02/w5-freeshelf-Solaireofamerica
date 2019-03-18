@@ -24,8 +24,8 @@ class Book(models.Model):
     added_on = models.DateTimeField(auto_now_add=True)
     book_url = models.URLField(max_length=400, default="")
     slug = models.SlugField()
-    category = models.ManyToManyField(
-        'Categories',
+    categories = models.ManyToManyField(
+        'Category',
         help_text="Enter the Category/s for the book.",
         related_name="category",
     )
@@ -40,12 +40,12 @@ class Book(models.Model):
         return reverse("book_detail", args=(self.pk, ))
 
 
-class Categories(models.Model):
-    name = models.CharField(max_length=50)
+class Category(models.Model):
+    name = models.CharField(max_length=50, null=True)
     slug = models.SlugField()
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("(self)", args={self.slug})
+        return reverse("category", args={self.slug})

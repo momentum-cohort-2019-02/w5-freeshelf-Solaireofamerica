@@ -31,9 +31,10 @@
             </div>
         </div>
         <div class="flex flex-wrap">
-          <p>Book Categories:</p>
-            {% for book in book.category.all %}
-              <a>{{ category.name }}</a>
+          <p class="pl4">Book Categories:</p>
+            {% for category in category.category.all %}
+              <a class="{% url category.get_absolute_url %}">{{ category.name }}</a>
+            {% endfor %}
         </div>
       </nav>
     </header>
